@@ -2,6 +2,7 @@
   <div id="app">
     <div class="container">
       <SelectArea />
+      <CurrentTime />
       <Timezones />
     </div>
   </div>
@@ -10,12 +11,14 @@
 <script>
 import Timezones from "./components/Timezones.vue";
 import SelectArea from "./components/SelectArea.vue";
+import CurrentTime from "./components/CurrentTime.vue";
 
 export default {
   name: "App",
   components: {
     Timezones,
-    SelectArea
+    SelectArea,
+    CurrentTime
   }
 };
 </script>

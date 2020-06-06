@@ -1,10 +1,12 @@
 <template>
   <div class="flex">
+    <h3>Select Area:</h3>
     <select @change="updateType($event)">
       <option>Please select one:</option>
       <option>Africa</option>
       <option>America</option>
       <option>Antarctica</option>
+      <option>Europe</option>
     </select>
 
     <button @click="onSubmit">submit</button>

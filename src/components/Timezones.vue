@@ -2,7 +2,12 @@
   <div>
     <h3>TimeZones</h3>
     <div class="grid">
-      <div v-for="item in allTimeZones" :key="item.id" class="item">{{item}}</div>
+      <div
+        @dblclick="onDblClick(item)"
+        v-for="item in allTimeZones"
+        :key="item.id"
+        class="item"
+      >{{item}}</div>
     </div>
   </div>
 </template>
@@ -12,8 +17,13 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Timezones",
   methods: {
-    ...mapActions(["fetchTimeZones"]),
-    ...mapGetters(["getType"])
+    ...mapActions(["fetchTimeZones", "fetchCurrentTime"]),
+    ...mapGetters(["getType"]),
+
+    onDblClick(item) {
+      console.log(item);
+      this.fetchCurrentTime(item);
+    }
   },
   computed: mapGetters(["allTimeZones"]),
   created() {
