@@ -7,6 +7,8 @@
       <option>America</option>
       <option>Antarctica</option>
       <option>Europe</option>
+            <option>Asia</option>
+               <option>Australia</option>
     </select>
 
     <button @click="onSubmit">submit</button>
